@@ -1,0 +1,63 @@
+== Introduction ==
+JCalc (or JCalculate) is a [[Java (programming language)|Java]] [[programming library]] for easily calculating [[Equation|math equations]], without having to manually write equations in Java's own syntax and commands. JCalc is easy to use without syntax problems, and can be used to calculate any math. For example it can solve <math>\sqrt{c=2 \over a=c}+x</math> with the result <math>1+x</math>. For Java, you would write it in the following the steps. The expression can be evaluated as follows:
+
+Let c = 2.
+
+Let a = c.
+
+Then, the expression becomes:
+
+<math>\sqrt{\frac{c=2}{a=c}} + x</math>
+
+Substituting the values of c and a:
+
+<math>\sqrt{\frac{2}{2}} + x</math>
+
+
+Simplifying the fraction:
+
+<math>\sqrt{1} + x</math>
+
+Taking the square root:
+
+<math>1 + x</math>
+
+Therefore, the simplified expression is:
+
+<math>1 + x</math> 
+
+The code would be in Java, following these steps with the following algorithm code block.  <syntaxhighlight lang="java">
+public class ExpressionEvaluator {
+    public static double evaluate(double x) {
+        double c = 2;
+        double a = c;
+
+        // Note:  We're interpreting the original expression's equals signs as assignments.
+        //       A true mathematical expression wouldn't have assignments inside a sqrt.
+
+        double result = Math.sqrt((double) c / a) + x; // Explicit cast to double for division
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        double x = 5.0;  // Example value of x
+        double result = evaluate(x);
+        System.out.println("Result for x = " + x + ": " + result);
+
+        x = 10.0; //Another example
+        result = evaluate(x);
+        System.out.println("Result for x = " + x + ": " + result);
+    }
+}
+</syntaxhighlight>
+The expression can be evaluated programmatically in Java as follows.
+This code, when compiled and run, will produce the following output:
+
+Result for <math>x = 5.0: 6.0</math>
+
+Result for <math>x = 10.0: 11.0</math>
+
+Explanation:
+
+The Java code defines a method evaluate(x) that takes a double x as input.  It assigns c = 2 and a = c.  It then calculates the square root of c ÷ a (with an explicit cast to double to ensure floating-point division) and adds x to the result. The main method demonstrates how to call the evaluate method with example values of x and prints the output to the console. JCalc has it's own commands you can use in Java code to complete math equations of any type.<ref>{{Citation |last=Boonk3312 |title=Boonk8812/JCalculate |date=2025-02-16 |url=https://github.com/Boonk8812/JCalculate |access-date=2025-02-17}}</ref>
