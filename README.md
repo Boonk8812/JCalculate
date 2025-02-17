@@ -10,3 +10,5 @@ import com.openjdk.jcalculate.*;
 // Rest of your code
 ```
 
+![JCalc Logo](https://github.com/user-attachments/assets/0c3d990d-22c8-49e2-bdac-58829c72750b)
+JCalc's logo
