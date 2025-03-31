@@ -62,7 +62,7 @@ Contributions to JCalculate are welcome! Please submit pull requests or create i
 
 ## License
 
-\[Insert License Here\] (Please add the appropriate license, e.g., Apache 2.0, MIT, etc.)
+Creative Commons Zero v1.0 Universal
 
 ## Author
 
